@@ -27,3 +27,13 @@ const main = () => {
 }
 
 main()
+
+/*
+    Complexity:
+        Bubble sort
+
+        - sort first element(x) using bubble sort.
+        - when first element(x) is equal then then compare with second(y)
+
+        2 nested loops O(n^2)
+*/
