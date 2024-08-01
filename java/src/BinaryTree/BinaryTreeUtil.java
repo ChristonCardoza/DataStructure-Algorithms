@@ -21,7 +21,7 @@ public class BinaryTreeUtil {
     public static TreeNode createBinaryTreeFromArray(Integer[] arr){
 
         if(arr.length == 0 || arr[0] == null){
-            return new TreeNode(-1);
+            return null;
         }
 
         root = new TreeNode(arr[0]);
