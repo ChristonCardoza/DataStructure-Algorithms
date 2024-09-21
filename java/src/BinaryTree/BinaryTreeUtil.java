@@ -2,16 +2,6 @@ package BinaryTree;
 
 import java.util.*;
 
-class TreeNode {
-    int key;
-    TreeNode left, right;
-
-    public TreeNode(int value){
-        key = value;
-        left = right = null;
-    }
-}
-
 
 public class BinaryTreeUtil {
 
