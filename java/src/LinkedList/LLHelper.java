@@ -42,4 +42,19 @@ public class LLHelper {
         }
         System.out.printf("<---Head\n");
     }
+
+    protected static SingleLLNode convertToLL(Integer[] arr) {
+
+        if(arr == null || arr.length == 0){ return  null;}
+
+        SingleLLNode head = new SingleLLNode(arr[0]);
+        SingleLLNode current = head;
+
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new SingleLLNode(arr[i]);
+            current = current.next;
+        }
+
+        return head;
+    }
 }
