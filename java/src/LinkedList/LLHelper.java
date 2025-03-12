@@ -57,4 +57,23 @@ public class LLHelper {
 
         return head;
     }
+
+    protected static DoubleLLNode convertToDLL(Integer[] arr) {
+
+        if(arr == null || arr.length == 0){ return  null;}
+
+        DoubleLLNode head = new DoubleLLNode(arr[0]);
+        DoubleLLNode current = head;
+        DoubleLLNode prev = null;
+
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new DoubleLLNode(arr[i]);
+            current.prev = prev;
+            prev = current;
+            current = current.next;
+        }
+        current.prev = prev;
+
+        return head;
+    }
 }
