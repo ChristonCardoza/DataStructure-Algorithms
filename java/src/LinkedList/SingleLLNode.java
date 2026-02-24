@@ -3,6 +3,7 @@ package LinkedList;
 public class SingleLLNode {
     Integer data;
     SingleLLNode next;
+    SingleLLNode random;
 
     SingleLLNode(){
         data = null;

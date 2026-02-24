@@ -3,8 +3,8 @@ package LinkedList;
 public class DoubleLLNode<T> {
 
     T data;
-    DoubleLLNode next;
-    DoubleLLNode prev;
+    DoubleLLNode<T> next;
+    DoubleLLNode<T> prev;
 
     DoubleLLNode(){
         this.data = null;
@@ -18,7 +18,7 @@ public class DoubleLLNode<T> {
         this.prev = null;
     }
 
-    DoubleLLNode(T data, DoubleLLNode next, DoubleLLNode prev){
+    DoubleLLNode(T data, DoubleLLNode<T> next, DoubleLLNode<T> prev){
         this.data = data;
         this.next = next;
         this.prev = prev;

@@ -2,7 +2,6 @@ package LinkedList;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.SequencedMap;
 
 public class LL23CopyNextRandom {
 
@@ -11,8 +10,8 @@ public class LL23CopyNextRandom {
         SingleLLNode head = LLHelper.convertToLL(arr);
         LLHelper.printSLL(head);
 
-        bruteforce(head);
-        optimal(head);
+        LLHelper.printSLL(bruteforce(head));
+        LLHelper.printSLL(optimal(head));
     }
 
     private static SingleLLNode bruteforce(SingleLLNode head){

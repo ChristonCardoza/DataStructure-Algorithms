@@ -3,20 +3,20 @@ package LinkedList;
 public class LL14DeleteAllOccurrence {
     public static void main(String[] args) {
 
-        DoubleLLNode Dhead = new DoubleLLNode(10);
-        Dhead.next = new DoubleLLNode(4);
+        DoubleLLNode<Integer> Dhead = new DoubleLLNode<>(10);
+        Dhead.next = new DoubleLLNode<>(4);
         Dhead.next.prev = Dhead;
 
-        Dhead.next.next = new DoubleLLNode(10);
+        Dhead.next.next = new DoubleLLNode<>(10);
         Dhead.next.next.prev = Dhead.next;
 
-        Dhead.next.next.next = new DoubleLLNode(10);
+        Dhead.next.next.next = new DoubleLLNode<>(10);
         Dhead.next.next.next.prev = Dhead.next.next;
 
-        Dhead.next.next.next.next = new DoubleLLNode(6);
+        Dhead.next.next.next.next = new DoubleLLNode<>(6);
         Dhead.next.next.next.next.prev = Dhead.next.next.next;
 
-        Dhead.next.next.next.next.next = new DoubleLLNode(10);
+        Dhead.next.next.next.next.next = new DoubleLLNode<>(10);
         Dhead.next.next.next.next.next.prev = Dhead.next.next.next.next;
 
         LLHelper.printDLL(Dhead);
@@ -28,13 +28,13 @@ public class LL14DeleteAllOccurrence {
 
     }
 
-    private static DoubleLLNode removeOccurrence(DoubleLLNode head, int key) {
+    private static DoubleLLNode<Integer> removeOccurrence(DoubleLLNode<Integer> head, int key) {
 
         if(head == null){
             return null;
         }
 
-        DoubleLLNode current = head;
+        DoubleLLNode<Integer> current = head;
 
         while(current != null){
 

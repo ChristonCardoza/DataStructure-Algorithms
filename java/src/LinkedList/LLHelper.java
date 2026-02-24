@@ -17,13 +17,13 @@ public class LLHelper {
         System.out.printf("x\n");
     }
 
-    protected static void printDLL(DoubleLLNode head){
+    protected static void printDLL(DoubleLLNode<Integer> head){
 
         if(head == null){
             System.out.println("List is empty");
         }
 
-        DoubleLLNode temp = head;
+        DoubleLLNode<Integer> temp = head;
         System.out.printf( "Head--->");
         while(temp != null){
             System.out.printf(temp.data + "--->");
@@ -58,16 +58,16 @@ public class LLHelper {
         return head;
     }
 
-    protected static DoubleLLNode convertToDLL(Integer[] arr) {
+    protected static DoubleLLNode<Integer> convertToDLL(Integer[] arr) {
 
         if(arr == null || arr.length == 0){ return  null;}
 
-        DoubleLLNode head = new DoubleLLNode(arr[0]);
-        DoubleLLNode current = head;
-        DoubleLLNode prev = null;
+        DoubleLLNode<Integer> head = new DoubleLLNode<>(arr[0]);
+        DoubleLLNode<Integer> current = head;
+        DoubleLLNode<Integer> prev = null;
 
         for (int i = 1; i < arr.length; i++) {
-            current.next = new DoubleLLNode(arr[i]);
+            current.next = new DoubleLLNode<>(arr[i]);
             current.prev = prev;
             prev = current;
             current = current.next;
